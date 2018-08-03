@@ -1,0 +1,238 @@
+// Basic setting
+// ------------------------------
+$skill-bg : #0d467f;
+$skill-blur : #1275bd;
+$skill-name-blur : #b3ae8f;
+$skill-learned-border : #f6ffa6;
+$skill-learned-blur : #bdbc00;
+$skill-locked : #5C5C5C;
+$skill-select : #0869af;
+$skill-unlock : #fff;
+$way-unlock : #FFFFFF;
+$way-locked : #dfdfdf;
+
+
+
+// Basic setting
+// ------------------------------
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Microsoft JhengHei;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#10030A,#301A3B);
+    color: #fff;
+}
+
+
+
+// Components
+// ------------------------------
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__info {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        &-img {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            background-color: $skill-bg;
+            border: 6px solid $skill-select;
+            box-shadow: 0 0px 2px 6px $skill-locked;
+            border-radius: 20px;
+
+            margin-bottom: 1rem;
+
+            img {
+                flex: 0 0 auto;
+                transform: scale(.8);
+            }
+
+            &.is-learned {
+                border-color: $skill-learned-border;
+                box-shadow: 0 0px 2px 6px $skill-learned-blur;
+            }
+        }
+
+        &-way.the-right {
+            position: absolute;
+            width: 100%;
+            left: 70px;
+            height: 12px;
+            background-color: $way-locked;
+            z-index: -1;
+
+            margin-left: -5px;
+            margin-top: -6px;
+        }
+
+        &-way.the-left {
+            position: absolute;
+            width: 100%;
+            right: 70px;
+            height: 12px;
+            background-color: $way-locked;
+            z-index: -1;
+
+            margin-left: -5px;
+            margin-top: -6px;
+        }
+
+        .skills__info-way {
+            &.is-unlock {
+                background-color: $way-unlock;
+            }
+
+            &.is-learned {
+                background-color: gold;
+            }
+        }
+    }
+
+    &__name {
+        text-shadow: 0px 0px 6px #b3ae8f;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    & + .skills {
+        margin-top: 4rem;
+    }
+}
+
+
+
+
+
+// Layout
+// ------------------------------
+.app {
+    width: 100%;
+    overflow: hidden;
+    min-width: 1240px;
+
+    &__footer {
+        position: relative;
+        width: 100%;
+        height: 550px;
+    }
+
+    .wtf {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+// app__headder 
+// -------------------------------
+.app__headder {
+    margin-bottom: 100px;
+}
+
+.career {
+    padding-top: 100px;
+    margin-left: 116px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 6px #7a64f3;
+
+    &-ch {
+        letter-spacing: 0.7rem;
+        margin-bottom: 6px;
+    }
+}
+
+
+
+// app__body
+// -------------------------------
+.road-map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &--col {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & + .road-map--col {
+            margin-left: 112px;
+        }
+    }
+
+    .branch-way__highlight {
+        position: absolute;
+        right: -58px;
+        width: 12px;
+        background-color: gold;
+        z-index: 2;
+    }
+
+    .branch-way__initial {
+        position: absolute;
+        right: -58px;
+        top: 36px;
+        width: 12px;
+        background-color: $way-locked;
+        z-index: 0;
+
+        height: calc(100% - 109px);
+    }
+}
+
+
+
+// app__footer
+// -------------------------------
+.decorations {
+    
+    .monocat {
+        position: absolute;
+        bottom: 160px;
+        transform: scale(.9);
+        z-index: 2;
+    }
+
+    .text-block {
+        position: relative;
+        position: absolute;
+        left: 160px;
+        bottom: 260px;
+        width: 70%;
+        height: 200px;
+        border: 8px solid $skill-select;
+        border-radius: 48px;
+        background-color: #fff;
+        z-index: 0;
+
+        span {
+            position: absolute;
+            left: 100px;
+            top: 50%;
+            margin-top: -1rem;
+            font-size: 1.6rem;
+            color: #777777;
+            z-index: 2;
+        }
+    }
+}

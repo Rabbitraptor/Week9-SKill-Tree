@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Microsoft JhengHei;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#10030A, #301A3B);
+  color: #fff; }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .skills__info {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center; }
+    .skills__info-img {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      background-color: #0d467f;
+      border: 6px solid #0869af;
+      box-shadow: 0 0px 2px 6px #5C5C5C;
+      border-radius: 20px;
+      margin-bottom: 1rem; }
+      .skills__info-img img {
+        flex: 0 0 auto;
+        transform: scale(0.8); }
+      .skills__info-img.is-learned {
+        border-color: #f6ffa6;
+        box-shadow: 0 0px 2px 6px #bdbc00; }
+    .skills__info-way.the-right {
+      position: absolute;
+      width: 100%;
+      left: 70px;
+      height: 12px;
+      background-color: #dfdfdf;
+      z-index: -1;
+      margin-left: -5px;
+      margin-top: -6px; }
+    .skills__info-way.the-left {
+      position: absolute;
+      width: 100%;
+      right: 70px;
+      height: 12px;
+      background-color: #dfdfdf;
+      z-index: -1;
+      margin-left: -5px;
+      margin-top: -6px; }
+    .skills__info .skills__info-way.is-unlock {
+      background-color: #FFFFFF; }
+    .skills__info .skills__info-way.is-learned {
+      background-color: gold; }
+  .skills__name {
+    text-shadow: 0px 0px 6px #b3ae8f;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff; }
+  .skills + .skills {
+    margin-top: 4rem; }
+
+.app {
+  width: 100%;
+  overflow: hidden;
+  min-width: 1240px; }
+  .app__footer {
+    position: relative;
+    width: 100%;
+    height: 550px; }
+  .app .wtf {
+    width: 100%;
+    height: 100%; }
+
+.app__headder {
+  margin-bottom: 100px; }
+
+.career {
+  padding-top: 100px;
+  margin-left: 116px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 6px #7a64f3; }
+  .career-ch {
+    letter-spacing: 0.7rem;
+    margin-bottom: 6px; }
+
+.road-map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .road-map--col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .road-map--col + .road-map--col {
+      margin-left: 112px; }
+  .road-map .branch-way__highlight {
+    position: absolute;
+    right: -58px;
+    width: 12px;
+    background-color: gold;
+    z-index: 2; }
+  .road-map .branch-way__initial {
+    position: absolute;
+    right: -58px;
+    top: 36px;
+    width: 12px;
+    background-color: #dfdfdf;
+    z-index: 0;
+    height: calc(100% - 109px); }
+
+.decorations .monocat {
+  position: absolute;
+  bottom: 160px;
+  transform: scale(0.9);
+  z-index: 2; }
+
+.decorations .text-block {
+  position: relative;
+  position: absolute;
+  left: 160px;
+  bottom: 260px;
+  width: 70%;
+  height: 200px;
+  border: 8px solid #0869af;
+  border-radius: 48px;
+  background-color: #fff;
+  z-index: 0; }
+  .decorations .text-block span {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -1rem;
+    font-size: 1.6rem;
+    color: #777777;
+    z-index: 2; }
